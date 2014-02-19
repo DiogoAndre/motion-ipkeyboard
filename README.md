@@ -42,6 +42,12 @@ gem 'motion-ipkeyboard'
     self.view.addSubview(ipv4_input_field)
 ```
 
+## Screenshots
+
+|IPv6|IPv4|
+|---|---|
+|![IPv6](ipkeyboard-ipv6@2x.png)|![IPv4](ipkeyboard-ipv4@2x.png)|
+
 ## Thanks
 
 The keyboard implementation is basicaly a translation of [doofyus/HexKeyboard](https://github.com/doofyus/HexKeyboard) to RubyMotion.
