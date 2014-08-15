@@ -117,6 +117,7 @@ module RMIPKeyboard
         @textField.text = "#{@textField.text}#{button.titleLabel.text}"
       end
       self.changeButtonBackgroundColourForHighlight(button)
+      @textField.sendActionsForControlEvents(UIControlEventEditingChanged)
     end
 
   end
