@@ -114,7 +114,14 @@ module RMIPKeyboard
       if button.tag == @numberOfKeys # Last key
         @textField.text = "#{@textField.text.chop}"
       else
-        @textField.text = "#{@textField.text}#{button.titleLabel.text}"
+        case @textField.delegate.respond_to?("textField:shouldChangeCharactersInRange:replacementString:")
+        when true
+          if @textField.delegate.textField(@textField,shouldChangeCharactersInRange: @textField.selectedTextRange, replacementString: button.titleLabel.text)
+            @textField.insertText(button.titleLabel.text)
+          end
+        else
+          @textField.insertText(button.titleLabel.text)
+        end
       end
       self.changeButtonBackgroundColourForHighlight(button)
       @textField.sendActionsForControlEvents(UIControlEventEditingChanged)
