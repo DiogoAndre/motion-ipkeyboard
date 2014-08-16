@@ -4,8 +4,8 @@ Gem::Specification.new do |gem|
   gem.name        = 'motion-ipkeyboard'
   gem.summary     = "iPhone keyboards customized for typing IPv4 and IPv6 values"
   gem.description = "Custom iPhone keyboard. Made for iOS7"
-  gem.version     = '0.0.3'
-  gem.date        = '2014-08-12'
+  gem.version     = '0.0.4'
+  gem.date        = '2014-08-16'
   gem.homepage    = 'https://github.com/diogoandre/motion-ipkeyboard'
   gem.licenses    = "MIT"
   files = []
